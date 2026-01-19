@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retro Glitch Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <style>
+      body {
+        background-color: #050505;
+        font-family: 'VT323', monospace;
+        overflow-x: hidden;
+      }
+      
+      /* Scrollbar Styling */
+      ::-webkit-scrollbar {
+        width: 10px;
+        background: #000;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #0ff;
+        border: 2px solid #000;
+      }
+
+      /* Custom Glitch Keyframes */
+      @keyframes glitch-anim-1 {
+        0% { clip-path: inset(20% 0 80% 0); transform: translate(-2px, 1px); }
+        20% { clip-path: inset(60% 0 10% 0); transform: translate(2px, -1px); }
+        40% { clip-path: inset(40% 0 50% 0); transform: translate(-2px, 2px); }
+        60% { clip-path: inset(80% 0 5% 0); transform: translate(2px, -2px); }
+        80% { clip-path: inset(10% 0 70% 0); transform: translate(-1px, 1px); }
+        100% { clip-path: inset(30% 0 50% 0); transform: translate(1px, -1px); }
+      }
+      @keyframes glitch-anim-2 {
+        0% { clip-path: inset(10% 0 60% 0); transform: translate(2px, -1px); }
+        20% { clip-path: inset(80% 0 5% 0); transform: translate(-2px, 2px); }
+        40% { clip-path: inset(30% 0 20% 0); transform: translate(2px, 1px); }
+        60% { clip-path: inset(10% 0 80% 0); transform: translate(-1px, -2px); }
+        80% { clip-path: inset(50% 0 30% 0); transform: translate(1px, 2px); }
+        100% { clip-path: inset(20% 0 70% 0); transform: translate(-2px, 1px); }
+      }
+      @keyframes scanline {
+        0% { transform: translateY(-100%); }
+        100% { transform: translateY(100%); }
+      }
+      @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'neon-cyan': '#00ffff',
+              'neon-magenta': '#ff00ff',
+              'neon-green': '#00ff00',
+              'dark-bg': '#050505',
+            },
+            fontFamily: {
+              'retro': ['VT323', 'monospace'],
+            },
+            animation: {
+              'blink': 'blink 1s step-end infinite',
+            }
+          }
+        }
+      }
+    </script>
+  <script type="module" src="/index.tsx"></script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
