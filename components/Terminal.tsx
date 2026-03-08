@@ -6,8 +6,8 @@ import GlitchText from './GlitchText';
 const Terminal: React.FC = () => {
   const [input, setInput] = useState('');
   const [messages, setMessages] = useState<ChatMessage[]>([
-    { role: 'model', text: 'INITIALIZING C.K. PROTOCOL v1.0...' },
-    { role: 'model', text: 'READY. TYPE "HELP" FOR COMMANDS OR ASK ME ANYTHING ABOUT CHRISTIAN.' }
+    { role: 'model', text: 'INITIALIZING V.A. PROTOCOL v1.0...' },
+    { role: 'model', text: 'READY. TYPE "HELP" FOR COMMANDS OR ASK ME ANYTHING ABOUT VEDANT.' }
   ]);
   const [isLoading, setIsLoading] = useState(false);
   const bottomRef = useRef<HTMLDivElement>(null);

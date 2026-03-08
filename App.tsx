@@ -102,15 +102,41 @@ const App: React.FC = () => {
 
                 {activeNav === NavItem.PROJECTS && (
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 animate-[scanline_0.5s_ease-out]">
-                        {[1, 2, 3, 4].map((i) => (
+                        {[
+                          {
+                            name: "sklearn-diagnose",
+                            description: "AI-powered diagnosis for Scikit-learn models: Detect overfitting, data leakage, class imbalance & more with LLM-generated insights.",
+                            tags: ["Python", "LLM", "Scikit-Learn"]
+                          },
+                          {
+                            name: "ViZDoom",
+                            description: "Doom-based AI research platform for reinforcement learning from raw visual information.",
+                            tags: ["Python", "AI", "Reinforcement Learning"]
+                          },
+                          {
+                            name: "LLoyd-Banking-Group",
+                            description: "Data analysis and predictive modeling for banking operations and customer insights.",
+                            tags: ["Jupyter", "Data Science", "Finance"]
+                          },
+                          {
+                            name: "Credit-Risk-Modelling",
+                            description: "Comprehensive credit risk assessment using advanced statistical and machine learning models.",
+                            tags: ["Jupyter", "Risk Analysis", "Python"]
+                          },
+                          {
+                            name: "Banking-Marketing-PandasAI",
+                            description: "Utilizing PandasAI to analyze banking marketing campaigns through natural language queries.",
+                            tags: ["Jupyter", "PandasAI", "Analytics"]
+                          }
+                        ].map((project, i) => (
                             <div key={i} className="border border-white/20 p-6 bg-white/5 hover:border-neon-cyan transition-colors group relative overflow-hidden">
-                                <div className="absolute top-0 right-0 p-2 text-xs text-white/30 group-hover:text-neon-cyan">DATA_SET_0{i}</div>
-                                <h3 className="text-2xl text-neon-green mb-2 group-hover:animate-pulse">MODEL_TRAINING_{i}</h3>
-                                <p className="text-gray-400 mb-4">A predictive model analysis using deep learning techniques.</p>
+                                <div className="absolute top-0 right-0 p-2 text-xs text-white/30 group-hover:text-neon-cyan">REPO_0{i+1}</div>
+                                <h3 className="text-2xl text-neon-green mb-2 group-hover:animate-pulse uppercase">{project.name}</h3>
+                                <p className="text-gray-400 mb-4">{project.description}</p>
                                 <div className="flex gap-2 text-xs uppercase tracking-wider text-neon-magenta">
-                                    <span>[Python]</span>
-                                    <span>[PyTorch]</span>
-                                    <span>[Jupyter]</span>
+                                    {project.tags.map(tag => (
+                                      <span key={tag}>[{tag}]</span>
+                                    ))}
                                 </div>
                             </div>
                         ))}
@@ -122,8 +148,8 @@ const App: React.FC = () => {
                         <h2 className="text-4xl sm:text-5xl text-neon-cyan mb-6 decoration-dashed underline underline-offset-8">USER_PROFILE</h2>
                         <div className="space-y-6 text-xl text-gray-300 leading-relaxed">
                             <p>
-                                <span className="text-neon-magenta font-bold">STATUS:</span> Student / Researcher. <br/>
-                                <span className="text-neon-magenta font-bold">CURRENT_LOC:</span> Planet Earth.
+                                <span className="text-neon-magenta font-bold">STATUS:</span> Student. <br/>
+                                <span className="text-neon-magenta font-bold">CURRENT_LOC:</span> Mumbai, Maharashtra, India.
                             </p>
                             <p>
                                 I am fascinated by the patterns hidden within chaos. My journey involves mastering algorithms, statistical analysis, and neural networks to solve real-world problems.
@@ -131,7 +157,7 @@ const App: React.FC = () => {
                             <div className="p-4 border border-dashed border-gray-600 bg-black/50 mt-8">
                                 <div className="text-sm text-gray-500 mb-2">SKILL_MATRIX_LOADED:</div>
                                 <div className="flex flex-wrap gap-2">
-                                    {['Python', 'PyTorch', 'TensorFlow', 'SQL', 'Pandas', 'Scikit-learn', 'Data Viz', 'Deep Learning'].map(skill => (
+                                    {['Python', 'SQL', 'PowerBI', 'GenAI'].map(skill => (
                                         <span key={skill} className="bg-white/10 px-2 py-1 hover:bg-neon-cyan hover:text-black cursor-crosshair transition-colors">
                                             {skill}
                                         </span>
