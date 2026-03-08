@@ -106,30 +106,41 @@ const App: React.FC = () => {
                           {
                             name: "sklearn-diagnose",
                             description: "AI-powered diagnosis for Scikit-learn models: Detect overfitting, data leakage, class imbalance & more with LLM-generated insights.",
-                            tags: ["Python", "LLM", "Scikit-Learn"]
+                            tags: ["Python", "LLM", "Scikit-Learn"],
+                            url: "https://github.com/Vedant-cloud-ctrl/sklearn-diagnose"
                           },
                           {
                             name: "ViZDoom",
                             description: "Doom-based AI research platform for reinforcement learning from raw visual information.",
-                            tags: ["Python", "AI", "Reinforcement Learning"]
+                            tags: ["Python", "AI", "Reinforcement Learning"],
+                            url: "https://github.com/Vedant-cloud-ctrl/ViZDoom"
                           },
                           {
                             name: "LLoyd-Banking-Group",
                             description: "Data analysis and predictive modeling for banking operations and customer insights.",
-                            tags: ["Jupyter", "Data Science", "Finance"]
+                            tags: ["Jupyter", "Data Science", "Finance"],
+                            url: "https://github.com/Vedant-cloud-ctrl/LLoyd-Banking-Group"
                           },
                           {
                             name: "Credit-Risk-Modelling",
                             description: "Comprehensive credit risk assessment using advanced statistical and machine learning models.",
-                            tags: ["Jupyter", "Risk Analysis", "Python"]
+                            tags: ["Jupyter", "Risk Analysis", "Python"],
+                            url: "https://github.com/Vedant-cloud-ctrl/Credit-Risk-Modelling"
                           },
                           {
                             name: "Banking-Marketing-PandasAI",
                             description: "Utilizing PandasAI to analyze banking marketing campaigns through natural language queries.",
-                            tags: ["Jupyter", "PandasAI", "Analytics"]
+                            tags: ["Jupyter", "PandasAI", "Analytics"],
+                            url: "https://github.com/Vedant-cloud-ctrl/Banking-Marketing-PandasAI"
                           }
                         ].map((project, i) => (
-                            <div key={i} className="border border-white/20 p-6 bg-white/5 hover:border-neon-cyan transition-colors group relative overflow-hidden">
+                            <a 
+                                key={i} 
+                                href={project.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="border border-white/20 p-6 bg-white/5 hover:border-neon-cyan transition-colors group relative overflow-hidden block"
+                            >
                                 <div className="absolute top-0 right-0 p-2 text-xs text-white/30 group-hover:text-neon-cyan">REPO_0{i+1}</div>
                                 <h3 className="text-2xl text-neon-green mb-2 group-hover:animate-pulse uppercase">{project.name}</h3>
                                 <p className="text-gray-400 mb-4">{project.description}</p>
@@ -138,7 +149,7 @@ const App: React.FC = () => {
                                       <span key={tag}>[{tag}]</span>
                                     ))}
                                 </div>
-                            </div>
+                            </a>
                         ))}
                     </div>
                 )}
