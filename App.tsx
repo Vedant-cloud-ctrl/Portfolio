@@ -91,11 +91,13 @@ const App: React.FC = () => {
                              >
                                 INITIALIZE_CHAT()
                              </button>
-                             <button 
-                                className="px-6 py-3 border border-neon-magenta text-neon-magenta font-bold text-xl hover:bg-neon-magenta hover:text-black transition-all shadow-[0_0_15px_rgba(255,0,255,0.3)]"
+                             <a 
+                                href="/resume.pdf"
+                                download="Vedant_Adhangale_Resume.pdf"
+                                className="px-6 py-3 border border-neon-magenta text-neon-magenta font-bold text-xl hover:bg-neon-magenta hover:text-black transition-all shadow-[0_0_15px_rgba(255,0,255,0.3)] flex items-center justify-center"
                              >
                                 DOWNLOAD_CV
-                             </button>
+                             </a>
                         </div>
                     </div>
                 )}
