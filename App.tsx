@@ -165,7 +165,7 @@ const App: React.FC = () => {
                                 <span className="text-neon-magenta font-bold">CURRENT_LOC:</span> Mumbai, Maharashtra, India.
                             </p>
                             <p>
-                                I am driven by the synergy between statistical analysis and the rapidly evolving world of AI. My journey is focused on exploring the frontiers of Generative AI and Agentic systems to build intelligent, real-world solutions.
+                                I am fascinated by the patterns hidden within chaos. I am driven by the synergy between statistical analysis and the rapidly evolving world of AI. My journey is focused on exploring the frontiers of Generative AI and Agentic systems to build intelligent, real-world solutions.
                             </p>
                             <div className="p-4 border border-dashed border-gray-600 bg-black/50 mt-8">
                                 <div className="text-sm text-gray-500 mb-2">SKILL_MATRIX_LOADED:</div>
