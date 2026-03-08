@@ -80,8 +80,7 @@ const App: React.FC = () => {
                         </div>
                         
                         <p className="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-2xl leading-relaxed mb-8 border-l-4 border-neon-green pl-6 py-2 bg-gradient-to-r from-white/5 to-transparent">
-                            Passionate Data Science student exploring the frontiers of AI and Machine Learning. 
-                            Turning complex data into actionable insights.
+                            Aspiring Data Scientist & Analyst graduate with a strong foundation in machine learning and statistical analysis. Eager to apply Python and SQL skills within the banking sector to drive data-driven solutions and solve complex business problems.
                         </p>
 
                         <div className="flex gap-4">
